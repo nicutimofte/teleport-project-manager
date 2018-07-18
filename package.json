@@ -1,0 +1,15 @@
+{
+  "name": "@teleporthq/teleport-project-manager",
+  "version": "0.0.1",
+  "description": "Teleport Project Manager",
+  "main": "dist/index.js",
+  "author": "teleportHQ",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf ./dist && tsc --watch",
+    "build": "rm -rf ./dist && tsc -d"
+  },
+  "dependencies": {
+    "@teleporthq/teleport-lib-js": "0.0.15"
+  }
+}
