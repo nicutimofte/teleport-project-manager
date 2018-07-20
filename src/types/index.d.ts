@@ -15,9 +15,9 @@ interface PageObject {
 }
 
 interface ContentObject {
-  type: string,
-  source: string,
-  name: string,
-  style: { [key:string]: string | number }
+  type: string
+  source: string
+  name: string
+  style: { [key: string]: string | number }
   children: string | ContentObject[]
 }

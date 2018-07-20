@@ -3,11 +3,37 @@
   "version": "0.0.1",
   "description": "Teleport Project Manager",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "teleportHQ",
   "license": "MIT",
   "scripts": {
-    "dev": "rm -rf ./dist && tsc --watch",
-    "build": "rm -rf ./dist && tsc -d"
+    "start": "tsc -w",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
+    "lint": "tslint -p ./",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "npm run test -- --coverage --no-cache",
+    "upload:coverage": "codecov",
+    "precommit": "pretty-quick --staged && npm run lint",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/teleporthq/teleport-project-manager.git"
+  },
+  "homepage": "https://github.com/teleporthq/teleport-project-manager#README",
+  "devDependencies": {
+    "@types/jest": "^23.3.0",
+    "codecov": "^3.0.4",
+    "husky": "^0.14.3",
+    "jest": "^23.4.1",
+    "pretty-quick": "^1.6.0",
+    "ts-jest": "^23.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
+    "typescript": "^2.9.2",
+    "prettier": "^1.13.7"
   },
   "dependencies": {
     "@teleporthq/teleport-lib-js": "0.0.15"

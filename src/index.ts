@@ -1,11 +1,7 @@
-import TeleportContent from './content'
-import TeleportPage from './page'
-import TeleportComponent from './component'
-import TeleportProject from './page'
+import { Content } from './content'
+import { Page } from './page'
+import { Project } from './project'
+import { Component } from './component'
 
-export default TeleportProject
-export {
-  TeleportComponent,
-  TeleportContent,
-  TeleportPage,
-}
+export default Project
+export { Component as TeleportComponent, Content as TeleportContent, Page as TeleportPage }

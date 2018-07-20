@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es6",       
-    "module": "commonjs",  
-    "outDir": "./dist",    
-    "rootDir": "./src",    
-    "strict": true,        
-    "noImplicitAny": true, 
-    "esModuleInterop": true,
-    "lib": ["es2015", "es2017", "dom"]
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "dist",
+    "declaration": true,
+    "lib": ["es2015", "dom"],
+    "rootDir": "src",
+    "sourceMap": true,
+    "types": ["node", "jest"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "./__tests__/**/*"
   ]
 }
